@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Student Report Table</title>
+    <link rel="stylesheet" type="text/css" href="assignment-03.css">
+</head>
+
+<body>
+  <!-- Thomas Henry - 16351326 - 20/03/2020 - assignment 03 -->
+  <!-- Tested on: Windows 10 - Firefox 74.0 (64-bit), Chrome Version 80.0.3987.149 (64-bit), Microsoft Edge 44.18362.449.0 -->
+
+
+    <div class="tableDiv" style="font-family: Calibri, Sans-Serif">
+        <table id="record">
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Assignment 1</th>
+                <th>Assignment 2</th>
+                <th>Assignment 3</th>
+                <th>Assignment 4</th>
+                <th>Assignment 5</th>
+                <!-- clicking header of column will show grade conversion table -->
+                <th onClick="showToggle()">Average (%)</th>
+            </tr>
+            <tr>
+                <td>Thomas Henry</td>
+                <td>16351326</td>
+                <td contenteditable="true">-</td>
+                <td contenteditable="true">-</td>
+                <td contenteditable="true">-</td>
+                <td contenteditable="true">-</td>
+                <td contenteditable="true">-</td>
+                <td>-</td>
+        </table>
+    </div>
+
+    <div class="toggle" id="hiddenToggle">
+        <table id="gradeConversion">
+            <tr>
+              <!-- clicking header's will change grading system in record table -->
+                <th onClick="changeGrading(0)">Percent Grade</th>
+                <th onClick="changeGrading(1)">Letter Grade</th>
+                <th onClick="changeGrading(2)">4.0 Scale</th>
+            </tr>
+        </table>
+    </div>
+
+    <p>Unsubmitted Assignments: <span id="unsubmittedCount"></span></p>
+    <button id="addRow" onClick="addRow(true)">Add Row</button>
+    <button id="delRow" onClick="deleteRow()">Remove Row</button>
+    <button id="addCol" onClick="addColumn()">Add Column</button>
+    <button id="delCol" onClick="deleteColumn()">Remove Column</button>
+    <button id="restoreTable" onClick="restore()">Restore Table</button>
+
+    <script src="assignment-03.js"></script>
+</body>
+
+</html>
